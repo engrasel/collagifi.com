@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+
+</head>
+<body>
+
+    <header>
+        <div class="header_wrapper">
+            <div class="logo">
+                <img src="images/logo.png" alt="#">
+            </div>
+            <div class="profile">
+                <img src="images/user-icon.png" alt="#">
+                <p>John Doe</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard wrapper">
+            <div class="dashboard_heading">
+                <h2>my Dashboard</h2>
+                <a href="#">+ new pice</a>
+            </div>
+        </section>
+
+        <!-- accordion -->
+        <section class="wrapper">
+            <div class="accordion-single js-acc-single">
+                <div class="accordion-single-item js-acc-item is-open">
+                    <h2 class="accordion-single-title js-acc-single-trigger">Downloadable Art</h2>
+                    <div class="accordion-single-content">
+                        <div class="downloadable_img" style="background-image: url('https://picsum.photos/300/200?image=244');">
+                            <!-- <img src="https://picsum.photos/300/200?image=244" alt=""> -->
+                            <div class="download_icon">
+                                <a href="#">
+                                    <img src="images/download.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-single-item js-acc-item">
+                    <h2 class="accordion-single-title js-acc-single-trigger">Question 2</h2>
+                    <div class="accordion-single-content">
+                        <p>This is an Answer 2</p>
+                    </div>
+                </div>
+                <div class="accordion-single-item js-acc-item">
+                    <h2 class="accordion-single-title js-acc-single-trigger">Question 3</h2>
+                    <div class="accordion-single-content">
+                        <p>This is an Answer 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- js -->
+    <script src="js/script.js"></script>
+</body>
+</html>

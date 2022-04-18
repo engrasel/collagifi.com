@@ -6,8 +6,15 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-section {
+.wrapper{
+    max-width: 90%;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* section {
     position: relative;
     min-height: 100vh;
     background-color: #f8dd30;
@@ -15,18 +22,19 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-}
+} */
 
-section .container {
+section .signinBx_container {
     position: relative;
     width: 800px;
     height: 500px;
     background: #fff;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 50px auto;
 }
 
-section .container .user {
+section .signinBx_container .user {
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +43,7 @@ section .container .user {
     display: flex;
 }
 
-section .container .user .imgBx {
+section .signinBx_container .user .imgBx {
     position: relative;
     width: 50%;
     height: 100%;
@@ -43,7 +51,7 @@ section .container .user .imgBx {
     transition: 0.5s;
 }
 
-section .container .user .imgBx img {
+section .signinBx_container .user .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +60,7 @@ section .container .user .imgBx img {
     object-fit: cover;
 }
 
-section .container .user .formBx {
+section .signinBx_container .user .formBx {
     position: relative;
     width: 50%;
     height: 100%;
@@ -64,7 +72,7 @@ section .container .user .formBx {
     transition: 0.5s;
 }
 
-section .container .user .formBx form h2 {
+section .signinBx_container .user .formBx form h2 {
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -75,7 +83,7 @@ section .container .user .formBx form h2 {
     color: #555;
 }
 
-section .container .user .formBx form input {
+section .signinBx_container .user .formBx form input {
     position: relative;
     width: 100%;
     padding: 10px;
@@ -90,7 +98,7 @@ section .container .user .formBx form input {
     font-weight: 300;
 }
 
-section .container .user .formBx form input[type='submit'] {
+section .signinBx_container .user .formBx form input[type='submit'] {
     max-width: 100px;
     background: #677eff;
     color: #fff;
@@ -101,7 +109,7 @@ section .container .user .formBx form input[type='submit'] {
     transition: 0.5s;
 }
 
-section .container .user .formBx form .signup {
+section .signinBx_container .user .formBx form .signup {
     position: relative;
     margin-top: 20px;
     font-size: 12px;
@@ -111,62 +119,163 @@ section .container .user .formBx form .signup {
     font-weight: 300;
 }
 
-section .container .user .formBx form .signup a {
+section .signinBx_container .user .formBx form .signup a {
     font-weight: 600;
     text-decoration: none;
     color: #677eff;
 }
 
-section .container .signupBx {
+section .signinBx_container .signupBx {
     pointer-events: none;
 }
 
-section .container.active .signupBx {
+section .signinBx_container.active .signupBx {
     pointer-events: initial;
 }
 
-section .container .signupBx .formBx {
+section .signinBx_container .signupBx .formBx {
     left: 100%;
 }
 
-section .container.active .signupBx .formBx {
+section .signinBx_container.active .signupBx .formBx {
     left: 0;
 }
 
-section .container .signupBx .imgBx {
+section .signinBx_container .signupBx .imgBx {
     left: -100%;
 }
 
-section .container.active .signupBx .imgBx {
+section .signinBx_container.active .signupBx .imgBx {
     left: 0%;
 }
 
-section .container .signinBx .formBx {
+section .signinBx_container .signinBx .formBx {
     left: 0%;
 }
 
-section .container.active .signinBx .formBx {
+section .signinBx_container.active .signinBx .formBx {
     left: 100%;
 }
 
-section .container .signinBx .imgBx {
+section .signinBx_container .signinBx .imgBx {
     left: 0%;
 }
 
-section .container.active .signinBx .imgBx {
+section .signinBx_container.active .signinBx .imgBx {
     left: -100%;
 }
 
 @media (max-width: 991px) {
-    section .container {
+    section .signinBx_container {
         max-width: 400px;
     }
 
-    section .container .imgBx {
+    section .signinBx_container .imgBx {
         display: none;
     }
 
-    section .container .user .formBx {
+    section .signinBx_container .user .formBx {
         width: 100%;
     }
+}
+
+/* user page */
+.dashboard {
+    margin: 50px auto;
+}
+.logo img{max-width: 130px;}
+header{border-bottom: 1px solid #ccc;}
+.header_wrapper {
+    max-width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.profile {
+    display: flex;
+    justify-content: space-around;
+    gap: 7px;
+    align-items: center;
+}
+.profile img {
+    width: 20px;
+    height: 20px;
+}
+.dashboard_heading {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.dashboard_heading a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+.dashboard_heading h2 {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.accordion-single {
+    border-bottom: 1px solid #efefef;
+    margin-top: 10px;
+}
+
+.accordion-single-title {
+    border-top: 1px solid #efefef;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 400;
+}
+
+.accordion-single-title::after {
+    content: "";
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px #999;
+    border-right: solid 2px #999;
+    transform: translateY(-50%) rotate(135deg);
+}
+
+.accordion-single-content {
+    display: none;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+}
+
+.accordion-single-content p {
+    padding: 20px;
+}
+
+.accordion-single-item.is-open .accordion-single-content {
+    display: block;
+}
+
+.accordion-single-item.is-open .accordion-single-title::after {
+    transform: translateY(-50%) rotate(315deg);
+}
+
+.downloadable_img {
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 300px;
+    height: 200px;
+}
+.download_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.download_icon img {
+    width: 35px;
 }
