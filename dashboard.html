@@ -12,13 +12,15 @@
 <body>
 
     <header>
-        <div class="header_wrapper">
+        <div class="header_wrapper wrapper">
             <div class="logo">
-                <img src="images/logo.png" alt="#">
+                <a href="/"><img src="images/logo.png" alt="#"></a>
             </div>
             <div class="profile">
                 <img src="images/user-icon.png" alt="#">
-                <p>John Doe</p>
+                <a href="dashboard.html">
+                    <p>John Doe</p>
+                </a>
             </div>
         </div>
     </header>
@@ -28,13 +30,14 @@
         <section class="dashboard wrapper">
             <div class="dashboard_heading">
                 <h2>my Dashboard</h2>
-                <a href="#">+ new pice</a>
+                <a href="templates.html">+ new pice</a>
             </div>
         </section>
 
         <!-- accordion section -->
         <section class="wrapper">
             <div class="accordion-single js-acc-single">
+                
                 <div class="accordion-single-item js-acc-item is-open">
                     <h2 class="accordion-single-title js-acc-single-trigger">Downloadable Art</h2>
                     <div class="accordion-single-content">
@@ -48,68 +51,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-single-item js-acc-item">
-                    <h2 class="accordion-single-title js-acc-single-trigger">Standard Templates</h2>
-                    <div class="accordion-single-content">
-                        <section class="templates">
-                            <p>Templates for building 1/1 programmable art using Master/Layer system or Autonomous features.</p>
-                            <div class="templates_collections">
-                                <div class="template_item">
-                                    <img src="images/plus.png" alt="">
-                                    <h3>Custom</h3>
-                                    <p>Any number or Layers</p>
-                                </div>
-                                <div class="template_item">
-                                    <img src="images/day-and-night.png" alt="">
-                                    <h3>Custom</h3>
-                                    <p>Any number or Layers</p>
-                                </div>
-                                <div class="template_item">
-                                    <img src="images/24-hours.png" alt="">
-                                    <h3>Custom</h3>
-                                    <p>Any number or Layers</p>
-                                </div>
-                                <div class="template_item">
-                                    <h3 class="commingSoon_template">More Templates <br> Comming Soon</h3>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div class="accordion-single-item js-acc-item">
-                    <h2 class="accordion-single-title js-acc-single-trigger">Blueprint</h2>
-                    <div class="accordion-single-content">
-                        <p>This is an Answer 3</p>
-                    </div>
-                </div>
+                
             </div>
         </section>
-
-        <!-- templates section -->
-        <section class="templates wrapper">
-            <h2>Standard Templates</h2>
-            <p>Templates for building 1/1 programmable art using Master/Layer system or Autonomous features.</p>
-            <div class="templates_collections">
-                <div class="template_item">
-                    <img src="images/plus.png" alt="">
-                    <h3>Custom</h3>
-                    <p>Any number or Layers</p>
-                </div>
-                <div class="template_item">
-                    <img src="images/day-and-night.png" alt="">
-                    <h3>Custom</h3>
-                    <p>Any number or Layers</p>
-                </div>
-                <div class="template_item">
-                    <img src="images/24-hours.png" alt="">
-                    <h3>Custom</h3>
-                    <p>Any number or Layers</p>
-                </div>
-                <div class="template_item">
-                    <h3 class="commingSoon_template">More Templates <br> Comming Soon</h3>
-                </div>
-            </div>
-        </section>
+        
     </main>
     
     <!-- js -->
