@@ -307,12 +307,16 @@ header{border-bottom: 1px solid #ccc;}
     border: 1px solid #ccc;
     box-shadow: 0 0 6px #ccc;
 }
-.last_template_item {
+
+.template_item.last_template_item {
+    box-shadow: none;
     border: none;
 }
-.last_template_item:hover{
+.template_item.last_template_item:hover {
     box-shadow: none;
+    border: none;
 }
+
 .template_item h3,
 p {
     text-transform: capitalize;
