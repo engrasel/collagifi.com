@@ -1,7 +1,7 @@
-const toggleForm = () => {
-  const signinBx_container = document.querySelector(".signinBx_container");
-  signinBx_container.classList.toggle("active");
-};
+// Login Page
+$(".message a").click(function () {
+  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+});
 
 //  Accordion
 const accSingleTriggers = document.querySelectorAll(".js-acc-single-trigger");
