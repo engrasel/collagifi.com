@@ -302,7 +302,7 @@ p {
 
 /* hero-banner */
 .hero-banner{
-    background: linear-gradient(-90deg, transparent, black) fixed, url('/images/hero-banner.jpg') fixed;
+    background: linear-gradient(-90deg, transparent, black) fixed, url('../images/hero-banner.jpg') fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: cover;
