@@ -39,17 +39,16 @@ header {
     gap: 20px;
     align-items: center;
 }
-.signUp_btn {
-    font-size: 16px;
-    font-weight: 700;
-}
+
+.signUp_btn,
 .login_btn {
     font-size: 16px;
     font-weight: 700;
     background: #000000;
     color: #fff;
     padding: 5px 20px;
-    border-radius: 10px;
+    border: none;
+    cursor: pointer;
 }
 
 /* Login page */

@@ -1,8 +1,3 @@
-// Login Page
-$(".message a").click(function () {
-  $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
-});
-
 //  Accordion
 const accSingleTriggers = document.querySelectorAll(".js-acc-single-trigger");
 
@@ -22,3 +17,19 @@ function toggleAccordion() {
     item.classList.remove("is-open");
   });
 }
+
+// login modal
+var modal = document.getElementById("login_modal");
+var signUp_modal = document.getElementById("signUp_modal");
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+window.onclick = function (event) {
+  if (event.target == signUp_modal) {
+    signUp_modal.style.display = "none";
+  }
+};

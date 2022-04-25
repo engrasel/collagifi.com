@@ -6,55 +6,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form-modal.css">
     <title>Sign In</title>
 </head>
 <body>
     <header>
         <div class="header_wrapper wrapper">
             <div class="logo">
-                <a href="https://engrasel.github.io/collagifi.com/"><img src="images/logo.png" alt="#"></a>
+                <a href="https://engrasel.github.io/collagifi.com/">
+                    <img src="images/logo.png" alt="#">
+                </a>
             </div>
             <div class="form_button">
-                <a href="https://engrasel.github.io/#signUp" class="signUp_btn">Sign Up</a>
-                <a href="https://engrasel.github.io/#login" class="login_btn">Login</a>
+                <button class="login_btn" onclick="document.getElementById('signUp_modal').style.display='block'">Sign Up</button>
+                <button class="login_btn" onclick="document.getElementById('login_modal').style.display='block'">Login</button>
             </div>
         </div>
     </header>
 
-    <!-- hero-banner section -->
-    <section class="hero-banner">
-        <div class="hero-banner-content">
-            <h1>Reimagining NFTS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, deleniti!</p>
-            <a href="#" class="hero-banner-btn">Art Gallery</a>
-        </div>
-    </section>
-    <!-- login page -->
-    <div class="login-page">
-        <div class="form">
-            <form class="register-form" id="signUp">
-                <input type="text" placeholder="name" />
-                <input type="password" placeholder="password" />
-                <input type="text" placeholder="email address" />
-                <button>create</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-            <form class="login-form" id="login">
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password" />
-                <button>login</button>
-                <p class="message">Not registered? <a href="#signUp">Create an account</a></p>
-            </form>
-        </div>
-    </div>
+    <main>
+        <!-- hero-banner section -->
+        <section class="hero-banner">
+            <div class="hero-banner-content">
+                <h1>Reimagining NFTS</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, deleniti!</p>
+                <a href="#" class="hero-banner-btn">Art Gallery</a>
+            </div>
+        </section>
+    </main>
 
+<!-- login modal -->
+<div id="login_modal" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('login_modal').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <img src="images/logo.png" alt="Avatar" class="modal_logo">
+        </div>
 
-    <div style="text-align: center;">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container">
+            <button type="button" onclick="document.getElementById('login_modal').style.display='none'"
+                class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+<!-- Sign Up modal -->
+<div id="signUp_modal" class="modal">
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('signUp_modal').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <img src="images/logo.png" alt="Avatar" class="modal_logo">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="uname"><b>Email Address</b></label>
+            <input type="text" placeholder="Enter Email Address" name="uname" required>
+
+            <label for="crepsw"><b>Create Password</b></label>
+            <input type="password" placeholder="Create Password" name="crepsw" required>
+
+            <label for="conpsw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="conpsw" required>
+
+            <button type="submit" class="create_acc_btn">Create an Account</button>
+
+        </div>
+
+    </form>
+</div>
+
+<!-- unnecessary -->
+    <div style="text-align: center; margin-top: 50px;">
         <a href="dashboard.html">Go to Dashboard</a>
     </div>
 
     <!-- js file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

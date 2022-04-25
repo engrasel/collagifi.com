@@ -15,8 +15,9 @@
                 <a href="https://engrasel.github.io/collagifi.com/"><img src="images/logo.png" alt="#"></a>
             </div>
             <div class="form_button">
-                <a href="#signUp" class="signUp_btn">Sign Up</a>
-                <a href="#login" class="login_btn">Login</a>
+                <button class="login_btn" onclick="document.getElementById('signUp_modal').style.display='block'">Sign Up</button>
+                <button class="login_btn"
+                    onclick="document.getElementById('login_modal').style.display='block'">Login</button>
             </div>
         </div>
     </header>
@@ -24,14 +25,14 @@
     <!-- login page -->
     <div class="login-page">
         <div class="form">
-            <form class="register-form" id="signUp">
+            <form class="register-form">
                 <input type="text" placeholder="name" />
                 <input type="password" placeholder="password" />
                 <input type="text" placeholder="email address" />
                 <button>create</button>
                 <p class="message">Already registered? <a href="#">Sign In</a></p>
             </form>
-            <form class="login-form" id="login">
+            <form class="login-form">
                 <input type="text" placeholder="username" />
                 <input type="password" placeholder="password" />
                 <button>login</button>
@@ -40,13 +41,12 @@
         </div>
     </div>
 
-
-    <div style="text-align: center;">
-        <a href="dashboard.html">Go to Dashboard</a>
-    </div>
-
-    <!-- js file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    // Login Page
+    jQuery(".message a").click(function () {
+        jQuery("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
+</script>
 </body>
 </html>

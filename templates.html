@@ -1,50 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/form-modal.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Templates</title>
+    <title>Dashboard</title>
+
 </head>
+
 <body>
-<header>
-    <div class="header_wrapper wrapper">
-        <div class="logo">
-            <a href="https://engrasel.github.io/collagifi.com/"><img src="images/logo.png" alt="#"></a>
+    <header>
+        <div class="header_wrapper wrapper">
+            <div class="logo">
+                <a href="https://engrasel.github.io/collagifi.com/"><img src="images/logo.png" alt="#"></a>
+            </div>
+            <div class="form_button">
+                <button class="login_btn" onclick="document.getElementById('signUp_modal').style.display='block'">Sign
+                    Up</button>
+                <button class="login_btn"
+                    onclick="document.getElementById('login_modal').style.display='block'">Login</button>
+            </div>
         </div>
-        <div class="form_button">
-            <a href="#signUp" class="signUp_btn">Sign Up</a>
-            <a href="#login" class="login_btn">Login</a>
-        </div>
-    </div>
-</header>
-    <section class="templates wrapper">
-        <h2>Standard Templates</h2>
-        <p>Leverage these templates to autonomously create your NFT design using master layering and intelligence filtering.</p>
-        <div class="templates_collections">
+    </header>
 
-            <a href="#">
-                <div class="template_item">
-                    <img src="images/plus.png" alt="">
-                    <h3>Custom</h3>
-                    <p>Work with a Designer</p>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="template_item">
-                    <img src="images/day-and-night.png" alt="">
-                    <h3>Pic-in-Pic</h3>
-                    <p>Any number or Layers</p>
-                </div>
-            </a>
-
+    <main>
+        <section class="templates wrapper">
+            <h2>Standard Templates</h2>
+            <p>Leverage these templates to autonomously create your NFT design using master layering and intelligence filtering.
+            </p>
+            <div class="templates_collections">
+        
+                <a href="#">
+                    <div class="template_item">
+                        <img src="images/plus.png" alt="">
+                        <h3>Custom</h3>
+                        <p>Work with a Designer</p>
+                    </div>
+                </a>
+        
+                <a href="#">
+                    <div class="template_item">
+                        <img src="images/day-and-night.png" alt="">
+                        <h3>Pic-in-Pic</h3>
+                        <p>Any number or Layers</p>
+                    </div>
+                </a>
+        
                 <div class="template_item last_template_item">
                     <h3 class="commingSoon_template">More Templates <br> Comming Soon</h3>
                 </div>
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
 
+    <!-- login modal -->
+    <div id="login_modal" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('login_modal').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="images/logo.png" alt="Avatar" class="modal_logo">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+
+            <div class="container">
+                <button type="button" onclick="document.getElementById('login_modal').style.display='none'"
+                    class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div>
+    <!-- Sign Up modal -->
+    <div id="signUp_modal" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('signUp_modal').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="images/logo.png" alt="Avatar" class="modal_logo">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="uname"><b>Email Address</b></label>
+                <input type="text" placeholder="Enter Email Address" name="uname" required>
+
+                <label for="crepsw"><b>Create Password</b></label>
+                <input type="password" placeholder="Create Password" name="crepsw" required>
+
+                <label for="conpsw"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" name="conpsw" required>
+
+                <button type="submit" class="create_acc_btn">Create an Account</button>
+
+            </div>
+
+        </form>
+    </div>
+
+    <!-- js -->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
