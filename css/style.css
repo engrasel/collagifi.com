@@ -299,7 +299,6 @@ p {
     font-weight: 400;
 }
 
-
 /* hero-banner */
 .hero-banner {
     background: linear-gradient(-90deg, transparent, black) fixed, url('../images/hero-banner.jpg') fixed;
