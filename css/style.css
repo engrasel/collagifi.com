@@ -51,73 +51,6 @@ header {
     cursor: pointer;
 }
 
-/* Login page */
-@import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
-.login-page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-}
-
-.form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-.form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-.form button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF50;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
-
-.form button:hover,
-.form button:active,
-.form button:focus {
-    background: #43A047;
-}
-
-.form .message {
-    margin: 15px 0 0;
-    color: #b3b3b3;
-    font-size: 12px;
-}
-
-.form .message a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.form .register-form {
-    display: none;
-}
 
 .container {
     position: relative;
@@ -249,7 +182,7 @@ header {
 
 /* templates section */
 .templates {
-    width: 60%;
+    width: 70%;
     margin-top: 100px;
     margin-bottom: 50px;
 }
@@ -259,16 +192,50 @@ header {
     grid-gap: 20px;
     margin-top: 50px;
 }
-
-.template_item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    justify-content: center;
-    padding: 30px;
+.template_item{
     border: 1px solid #ccc;
     border-radius: 5px;
+    position: relative;
+    transition: all 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.template_item_content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+.template_item_hover_text{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.2s linear;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+}
+.template_item_hover_text:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.template_item_hover_text:hover p {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
 }
 .template_item:hover {
     border: 1px solid #ccc;
@@ -278,6 +245,7 @@ header {
 .template_item.last_template_item {
     box-shadow: none;
     border: none;
+    background: #eee;
 }
 .template_item.last_template_item:hover {
     box-shadow: none;
@@ -318,7 +286,7 @@ p {
     gap: 15px;
 }
 .hero-banner-content h1 {
-    font-size: 40px;
+    font-size: 50px;
     color: #fff;
 }
 .hero-banner-content p {
@@ -336,5 +304,35 @@ p {
     .wrapper {
         max-width: 90%;
         padding: 0;
+    }
+}
+@media screen and (max-width: 992px) {
+    .templates{width: 90%;}
+}
+@media screen and (max-width: 768px) {
+    .templates_collections {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .template_item{min-height: 200px;}
+}
+@media screen and (max-width: 576px) {
+.modal-content{min-width: initial;}
+.hero-banner-content h1 {
+    font-size: 30px;
+}
+}
+@media screen and (max-width: 400px) {
+    .header_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .templates_collections {
+        grid-template-columns: 1fr;
+    }
+    .accordion-single-item.is-open .accordion-single-content {
+        padding: 20px;
     }
 }
