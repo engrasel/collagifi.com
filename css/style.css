@@ -224,6 +224,9 @@ header {
     background: rgba(0, 0, 0, 1);
     border-radius: 5px;
 }
+.template_item:first-child .template_item_hover_text{
+    background: rgb(0, 8, 235);
+}
 .template_item_hover_text:hover{
     opacity: 1;
     cursor: pointer;
